@@ -1,0 +1,11 @@
+server:
+  port: 8070
+eureka:
+  instance:
+    hostname: eurekaserver
+    lease-renewal-interval-in-seconds: 10000 #心跳连接时间（单位毫秒，默认是60*1000）
+  client:
+    register-with-eureka: false # 禁用eureka作为客户端注册自己
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8070/eureka/ #多个用逗号隔开

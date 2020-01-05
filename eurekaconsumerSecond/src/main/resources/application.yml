@@ -1,0 +1,20 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://47.103.83.230:3306/mysql?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 2009@qazWSX
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: eureka-consumersecond
+server:
+  port: 8900
+
+mybatis:
+  mapper-locations: classpath*:mapperxml/*.xml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8070/eureka/ #注册中心的注册地址
+
