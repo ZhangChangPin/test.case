@@ -17,3 +17,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:8070/eureka/ #注册中心的注册地址
+
+#elasticsearch 自定义配置
+xiaomifeng1010:
+  elasticsearch:
+    hostlist: ${eshostlist:127.0.0.1:9200} #多个结点中间用逗号分隔

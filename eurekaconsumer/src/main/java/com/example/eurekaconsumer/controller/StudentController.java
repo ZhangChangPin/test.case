@@ -1,5 +1,6 @@
 package com.example.eurekaconsumer.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.eurekaconsumer.entity.StudentTBl;
 import com.example.eurekaconsumer.feign.StudentFeign;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,8 @@ public class StudentController {
     private StudentFeign studentFeign;
 
     @GetMapping("/getStudentCon")
-    public StudentTBl getStudentCon(Integer studentId){
-        StudentTBl student = studentFeign.getStudent(studentId);
-        return student;
+    public JSONObject getStudentCon(Integer studentId){
+        JSONObject jsonObject = studentFeign.getStudent(studentId);
+        return jsonObject;
     }
 }

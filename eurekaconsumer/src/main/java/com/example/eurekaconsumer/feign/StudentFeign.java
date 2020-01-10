@@ -1,6 +1,7 @@
 package com.example.eurekaconsumer.feign;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.eurekaconsumer.entity.StudentTBl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
@@ -9,5 +10,5 @@ import org.springframework.web.bind.annotation.*;
 public interface StudentFeign {
 
     @RequestMapping(value="/getStudent", method= RequestMethod.GET)
-    StudentTBl getStudent(@RequestParam("studentId") Integer studentId);
+    JSONObject getStudent(@RequestParam("studentId") Integer studentId);
 }
